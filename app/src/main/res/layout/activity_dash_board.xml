@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/scroll"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateDrawable="@drawable/progress_icon"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/headerCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:padding="1dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/all_tab"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/all_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:padding="3dp"
+                    android:text="all"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/business_tab"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/business_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_marginVertical="5dp"
+                    android:padding="3dp"
+                    android:text="business"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/entertainment_tab"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/entertainment_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="entertainment"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/general_tab"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                android:layout_marginStart="3dp"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/general_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="general"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/health_tab"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/health_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:padding="3dp"
+                    android:text="health"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/science_tab"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/science_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="science"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigationView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="75dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fragment_container"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:menu="@menu/bottom_nav_menu"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
