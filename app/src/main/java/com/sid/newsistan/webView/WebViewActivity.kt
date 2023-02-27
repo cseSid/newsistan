@@ -1,5 +1,6 @@
 package com.sid.newsistan.webView
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
@@ -34,9 +35,13 @@ class WebViewActivity : AppCompatActivity() {
                 super.onReceivedError(view, errorCode, description, failingUrl)
             }
 
+           override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+               binding.progressBar.visibility = View.GONE
+               super.onPageStarted(view, url, favicon)
+           }
+
             override fun onPageFinished(view: WebView, url: String) {
                 // TODO Auto-generated method stub
-                binding.progressBar.visibility = View.GONE
                 super.onPageFinished(view, url)
             }
         })
