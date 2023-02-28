@@ -16,14 +16,15 @@
         android:theme="@style/Theme.Newsistan"
         tools:targetApi="31">
         <activity
+            android:name=".ui.EntryScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".webView.WebViewActivity"
             android:exported="false" />
-        
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
-
         <activity
             android:name=".ui.SplashScreenActivity"
             android:exported="true"
@@ -31,6 +32,7 @@
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
